@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".personal">
 
     <TextView
@@ -20,5 +20,27 @@
         android:layout_height="5dp"
         android:layout_below="@+id/stateText"
         android:background="@color/absoluteDark" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stateText"
+        android:padding="15dp"
+        android:textColorHint="@color/absoluteDark"
+        android:hint="Some simple text"
+        android:background="@color/absoluteWhite"
+        app:endIconMode="clear_text"
+        app:endIconDrawable="@drawable/ic_arrow_back_black_24dp"
+        app:startIconDrawable="@drawable/ic_backspace_black_24dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:inputType="textFilter|textNoSuggestions"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 </RelativeLayout>
